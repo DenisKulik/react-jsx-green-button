@@ -1,11 +1,14 @@
-const App = (
-    <div className="app">
-        <button onСlick="">
-            Click me
-        </button>
-    </div>
-);
+const App = () => {
+    let btnText = 'Click me';
+    const onBtnClick = () => btnText = 'Hello from React';
 
-const container = document.querySelector('.app');
+    return (
+        <div className="app">
+            <button onClick={onBtnClick}>{btnText}</button>
+        </div>
+    );
+};
+
+const container = document.querySelector('#app');
 const root = ReactDOM.createRoot(container);
-root.render(App);
+root.render(<App/>);
