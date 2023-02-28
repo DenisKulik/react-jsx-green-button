@@ -1,5 +1,6 @@
 const App = () => {
-    let btnText = 'Click me';
+    const [btnText, setBtnText] = React.useState('Click me');
+
     const onBtnClick = () => btnText = 'Hello from React';
 
     return (
